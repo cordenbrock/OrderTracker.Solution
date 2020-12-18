@@ -11,7 +11,7 @@ namespace OrderTracker.Models
     public Vendor(string name, string description)
     {
       Name = name;
-      Description = Description;
+      Description = description;
       _instances.Add(this);
     }
 
