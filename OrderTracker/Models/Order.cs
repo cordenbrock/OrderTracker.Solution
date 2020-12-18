@@ -18,6 +18,10 @@ namespace OrderTracker.Models
       Date = (DateTime.Now).Date;
     }
 
-
+    public static List<Order> GetAll()
+    {
+      Order newOrder = new Order("test", "test");
+      return new List<Order> { newOrder };
+    }
   }
 }
