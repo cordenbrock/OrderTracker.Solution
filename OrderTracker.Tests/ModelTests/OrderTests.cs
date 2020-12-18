@@ -29,7 +29,7 @@ namespace OrderTracker.Tests
     {
       string title = "title of immense profundity";
       string description = "descriptive words of a descriptive nature";
-      DateTime date = DateTime.Now;
+      DateTime date = (DateTime.Now).Date;
       Order newOrder = new Order(title, description);
       Console.WriteLine(newOrder.Date);
       Console.WriteLine(date);

@@ -15,7 +15,7 @@ namespace OrderTracker.Models
     {
       Title = title;
       Description = description;
-      Date = (DateTime.Now);
+      Date = (DateTime.Now).Date;
     }
 
 
