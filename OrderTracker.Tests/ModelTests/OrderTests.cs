@@ -52,7 +52,7 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
     {
       Order newOrder = new Order("title", "description");
 
@@ -61,7 +61,16 @@ namespace OrderTracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order newOrder1 = new Order("title1", "description1");
+      Order newOrder2 = new Order("title2", "description2");
 
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder2, result);
+    }
 
   }
 }
