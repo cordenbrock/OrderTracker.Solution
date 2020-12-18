@@ -12,7 +12,7 @@ namespace OrderTracker.Tests
 
     public void Dispose()
     {
-      // Order.ClearAll();
+      Order.ClearAll();
     }
 
     [TestMethod]
@@ -47,6 +47,15 @@ namespace OrderTracker.Tests
       List<Order> newList = new List<Order> { newOrder1, newOrder2, newOrder3 };
 
       List<Order> result = Order.GetAll();
+      foreach (Order order in newList)
+      {
+        Console.WriteLine(order);
+      };
+      
+      foreach (Order order in result)
+      {
+        Console.WriteLine(order);
+      };
 
       CollectionAssert.AreEqual(newList, result);
     }

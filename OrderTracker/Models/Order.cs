@@ -16,12 +16,19 @@ namespace OrderTracker.Models
       Title = title;
       Description = description;
       Date = (DateTime.Now).Date;
+      _instances.Add(this);
     }
 
     public static List<Order> GetAll()
     {
-      Order newOrder = new Order("test", "test");
-      return new List<Order> { newOrder };
+      return _instances;
     }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+
+
   }
 }
