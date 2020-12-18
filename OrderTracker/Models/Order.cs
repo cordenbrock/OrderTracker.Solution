@@ -35,8 +35,5 @@ namespace OrderTracker.Models
     {
       return _instances[searchId - 1];
     }
-
-
-    
   }
 }
