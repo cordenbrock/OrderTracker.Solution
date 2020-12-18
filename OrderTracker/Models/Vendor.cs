@@ -34,8 +34,7 @@ namespace OrderTracker.Models
     }    
     public void AddOrder(Order order)
     {
-      Order testOrder = new Order("test", "test");
-      Orders.Add(testOrder);
+      Orders.Add(order);
     }
   }
 }
