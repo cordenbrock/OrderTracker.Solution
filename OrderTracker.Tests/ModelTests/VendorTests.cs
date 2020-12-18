@@ -13,5 +13,15 @@ namespace OrderTracker.Tests
     {
       // Vendor.ClearAll();
     }
+
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      string name = "name";
+      string description = "description";
+
+      Vendor newVendor = new Vendor(name, description);
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
   }
 }
