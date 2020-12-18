@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OrderTracker.Controllers
 {
-  public class OrderTracker : Controller
+  public class HomeController : Controller
   {
 
     [HttpGet("/")]
