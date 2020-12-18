@@ -23,5 +23,17 @@ namespace OrderTracker.Tests
       Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+
+    [TestMethod]
+    public void TestProps_RetrievesObjProperties_Props()
+    {
+      string name = "name";
+      string description = "description";
+
+      Vendor newVendor = new Vendor(name, description);
+
+      Assert.AreEqual(name, newVendor.Name);
+      Assert.AreEqual(description, newVendor.Description);
+    }
   }
 }
