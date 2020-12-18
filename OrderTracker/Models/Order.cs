@@ -1,3 +1,5 @@
+
+using System;
 using System.Collections.Generic;
 
 namespace OrderTracker.Models
@@ -6,13 +8,16 @@ namespace OrderTracker.Models
   {
     public string Title { get; set; }
     public string Description { get; set; }
-    public string Date { get; set; }
+    public DateTime Date { get; set; }
     private static List<Order> _instances = new List<Order> {};
 
     public Order(string title, string description)
     {
       Title = title;
       Description = description;
+      Date = (DateTime.Now);
     }
+
+
   }
 }
