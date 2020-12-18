@@ -17,8 +17,8 @@ namespace OrderTracker.Models
       Title = title;
       Description = description;
       Date = (DateTime.Now).Date;
-      Id = _instances.Count;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()
@@ -33,7 +33,7 @@ namespace OrderTracker.Models
 
     public static Order Find(int searchId)
     {
-      return _instances[searchId];
+      return _instances[searchId - 1];
     }
 
   }
