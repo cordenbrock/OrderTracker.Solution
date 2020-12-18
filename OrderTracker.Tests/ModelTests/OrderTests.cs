@@ -13,5 +13,18 @@ namespace OrderTracker.Tests
     {
       // Order.ClearAll();
     }
+
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      string title = "title";
+      string description = "description";
+
+      Order newOrder = new Order(title, description);
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+
+
+
   }
 }
