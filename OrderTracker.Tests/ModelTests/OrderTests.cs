@@ -47,8 +47,18 @@ namespace OrderTracker.Tests
       List<Order> newList = new List<Order> { newOrder1, newOrder2, newOrder3 };
 
       List<Order> result = Order.GetAll();
-      
+
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      Order newOrder = new Order("title", "description");
+
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
     }
 
 

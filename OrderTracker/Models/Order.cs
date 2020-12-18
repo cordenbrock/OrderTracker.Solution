@@ -9,6 +9,7 @@ namespace OrderTracker.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTime Date { get; set; }
+    public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
     public Order(string title, string description)
@@ -16,6 +17,7 @@ namespace OrderTracker.Models
       Title = title;
       Description = description;
       Date = (DateTime.Now).Date;
+      Id = _instances.Count;
       _instances.Add(this);
     }
 
@@ -29,6 +31,10 @@ namespace OrderTracker.Models
       _instances.Clear();
     }
 
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId];
+    }
 
   }
 }
