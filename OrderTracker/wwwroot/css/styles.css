@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(29, 27, 27);
+  color: rgb(116, 146, 116);
+  margin: 5rem;
+  text-shadow: 0 0 .1rem rgb(104, 59, 104);
+}
+
+h1 {
+  color: rgb(52, 104, 52);
+}
+
+a {
+  color: rgb(122, 96, 122); 
+}
+
+a:hover {
+  color: rgb(104, 59, 104);
+  text-decoration: none;
+}
